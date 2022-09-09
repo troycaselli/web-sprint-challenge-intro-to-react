@@ -79,6 +79,13 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+  -React is a JS library created by Facebook. This library is intended to make DOM manipulation more efficient and swift, particularly for large scale projects and websites that experience lots of user interaction.
+
+2. Describe component state.
+  -Components, simply put, are reusuable functions that inject HTML into the DOM. Component state is data within the scope of the component that may be altered and cause changes in the appearance of the component's presentation of the HTML.
+
+3. Describe props.
+  -Props are properties or arguments passed into components (functions) so that the function can access relevant information in order to execute and cause DOM manipulation.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+  -Side effects are located within components and are usually run after the first rendering (and often after other changes) of the function. They affect things outside the scope of the function that they are in. Side effects may be synced with certain props or variables by including a dependency array as the second argument received by useEffect. When whatever (if anything) is inside the dependency array changes, the useEffect will run again.

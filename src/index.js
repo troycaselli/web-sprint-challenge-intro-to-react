@@ -5,7 +5,14 @@ import "./index.css";
 import App from "./App";
 import "./App.css";
 
+import theme from './theme';
+import {ThemeProvider} from 'styled-components';
+
 import { worker } from "./mocks/browser";
 worker.start();
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <ThemeProvider theme={theme}>
+        <App />
+    </ThemeProvider>
+, document.getElementById("root"));
